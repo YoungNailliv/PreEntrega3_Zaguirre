@@ -1,0 +1,114 @@
+@media only screen and (min-width: 1500px) {
+
+    body {
+        grid-template-rows: 100px auto 50px;
+    }
+
+    .menu_navbar li a{
+        font-size: 24px;
+    }
+    .menu_navbar li {
+        width: 150px;
+    }
+
+    .menu_navbar {
+        gap: 1.875rem;
+    }
+    .carrito_navbar {
+        top: 0.5%;
+    }
+    .carrito_navbar:active {
+        background-color: #D9534F;
+        box-shadow: -5px 5px #a03d39;
+        transform: translateY(4px);
+    }
+
+    .carrito_navbar img {
+        width: 55px;
+    }
+    .logo_navbar img {
+        width: 100px;
+        padding-left: .3125rem;
+        padding-top: 20px;
+    }
+    
+    .article_index{
+        gap: 3.125rem;
+    }
+    
+    .article_index h1 {
+        width: 1000px;
+        font-size: 52px;
+    }
+
+    .article_index h2 {
+        font-size: 40px;
+    }
+    .article_index a {
+        width: 250px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .foto_uno_nosotros img{
+        width: 500px;
+        height: 300px;
+    }
+
+    .card_nosotros {
+        width: 400px;
+        height: 700px;
+    }
+    .card_nosotros h2 {
+        font-size: 32px;
+    }
+
+    .card_nosotros p {
+        font-size: 20px;
+    }
+
+    .main_contacto iframe {
+        width: 440px;
+        height: 440px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12.5rem;
+    }
+
+    .info_contacto {
+        width: 400px;
+    }
+    .info_contacto img {
+        width: 400px;
+    }
+
+    .texto_contacto {
+        left: 60px;
+        top: 100px;
+        width: 330px;
+        font-size: 20px;
+    }
+
+    .formulario_contacto {
+        width: 400px;
+        height: 440px;
+    }
+
+    .formulario_contacto label {
+        margin-left: 24px;
+        font-size: 30px;
+    }
+    
+    #mensaje {
+        height: 210px;
+    }
+    .formulario_contacto input {
+        width: 330px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-top: 8px;
+    }
+}

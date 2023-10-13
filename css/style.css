@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+/*  font-family: 'Inter', sans-serif;  --- navbar*/
+/*  font-family: 'Roboto Condensed', sans-serif; -----  parrafo*/
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +12,34 @@
 html {
   width: 100%;
   height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 80px auto 50px;
+  background-image: url("../assets/img/fondo2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  height: 100%;
+  background-color: #D9534F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
-  background-color: #D9534F;
+  font-family: "Inter", sans-serif;
 }
 header nav {
   background-color: #D9534F;
@@ -55,6 +84,9 @@ header nav label {
   border-radius: 10px;
 }
 
+.logo_navbar {
+  transition-duration: 0.4s;
+}
 .logo_navbar img {
   width: 80px;
   padding-left: 0.3125rem;
@@ -75,8 +107,348 @@ header nav label {
 
 #toggle:checked ~ .menu_navbar {
   background-color: #a03d39;
+  color: white;
   display: flex;
   top: 80px;
+}
+#toggle:checked ~ .menu_navbar li {
+  border: 1px solid white;
+  width: 75%;
+  margin: 0.3125rem;
+  transition-duration: 0.4s;
+}
+#toggle:checked ~ .menu_navbar li:hover {
+  transform: scale(1.1);
+}
+
+.rrss_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.article_index {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.875rem;
+}
+.article_index h1 {
+  font-size: 32px;
+  color: #FFAD60;
+  font-family: "Roboto Condensed", sans-serif;
+  text-shadow: 0px 2px 2px black;
+}
+.article_index h2 {
+  color: #d48e4c;
+  font-family: "Roboto Condensed", sans-serif;
+  text-shadow: 0px 2px 2px black;
+}
+.article_index a {
+  color: white;
+  width: 180px;
+  height: 70px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.25rem;
+  background-color: #96CEB4;
+  border-radius: 50px;
+  border: black;
+  box-shadow: 0px 3px 0 #3a5045;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  text-shadow: -1px 1px 0px black;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article_index a:hover {
+  background-color: #96CEB4;
+  transition-duration: 0.3s;
+  box-shadow: 0px 8px 0 #3a5045;
+}
+.article_index a:active {
+  background-color: #96CEB4;
+  box-shadow: 0 5px #3a5045;
+  transform: translateY(4px);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_tienda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #632523;
+  gap: 1.25rem;
+}
+.main_tienda .banner_feria {
+  display: none;
+}
+.main_tienda .banner_feria_mobile {
+  justify-self: center;
+  display: flex;
+}
+.main_tienda h1 {
+  color: white;
+  text-align: center;
+}
+.main_tienda h2 {
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+  font-size: 20px;
+}
+.main_tienda .productos {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.main_tienda .productos .contenedor_producto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9534F;
+  padding: 20px;
+  border-radius: 50px;
+}
+.main_tienda .productos .contenedor_producto .card_producto {
+  background-color: #FFEEAD;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  gap: 0.3125rem;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: -5px 5px 0 #b3a779;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.main_tienda .productos .contenedor_producto img {
+  width: 150px;
+  background-color: #666046;
+  padding: 5px;
+  border-radius: 10px;
+}
+.main_tienda .productos .contenedor_producto h3 {
+  color: black;
+  font-weight: 300;
+}
+.main_tienda .productos .contenedor_producto .agregar_producto {
+  width: 120px;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #FFAD60;
+}
+
+.cantidad_producto {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.cantidad_producto input {
+  width: 50px;
+  height: 25px;
+}
+.cantidad_producto .boton_producto {
+  width: 30px;
+  height: 25px;
+}
+.cantidad_producto .mas {
+  background-color: #96CEB4;
+}
+.cantidad_producto .menos {
+  background-color: #D9534F;
+}
+
+@media only screen and (min-width: 720px) {
+  .main_tienda .banner_feria {
+    display: flex;
+  }
+  .main_tienda .banner_feria_mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header nav {
+    background-color: rgba(245, 222, 179, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header nav .logo_navbar {
+    position: absolute;
+    left: 2%;
+  }
+  header nav .menu_navbar {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9534F;
+    box-shadow: -5px 5px 0px #a03d39;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 9999px;
+    gap: 0.4375rem;
+  }
+  header nav .menu_navbar li {
+    width: 100px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition-duration: 0.2s;
+    color: white;
+    cursor: pointer;
+  }
+  header nav .menu_navbar li:hover {
+    background-color: #a03d39;
+    padding: 5px;
+    border-radius: 50px;
+    transform: scale(1.1);
+  }
+  header nav .menu_navbar .carrito {
+    display: none;
+  }
+  header nav label {
+    display: none;
+  }
+  header nav .carrito_navbar {
+    display: flex;
+    position: absolute;
+    right: 4%;
+    background-color: #D9534F;
+    box-shadow: -5px 5px 0px #a03d39;
+    padding: 15px;
+    border-radius: 9999px;
+    transition-duration: 0.3s;
+  }
+  header nav .carrito_navbar img {
+    width: 35px;
+  }
+  header nav .carrito_navbar:active {
+    background-color: #D9534F;
+    box-shadow: -5px 5px #a03d39;
+    transform: translateY(4px);
+  }
+  .navbar_tienda {
+    background-color: #632523;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  body {
+    grid-template-rows: 100px auto 50px;
+  }
+  .menu_navbar li a {
+    font-size: 24px;
+  }
+  .menu_navbar li {
+    width: 150px;
+  }
+  .menu_navbar {
+    gap: 1.875rem;
+  }
+  .carrito_navbar {
+    top: 0.5%;
+  }
+  .carrito_navbar:active {
+    background-color: #D9534F;
+    box-shadow: -5px 5px #a03d39;
+    transform: translateY(4px);
+  }
+  .carrito_navbar img {
+    width: 55px;
+  }
+  .logo_navbar img {
+    width: 100px;
+    padding-left: 0.3125rem;
+    padding-top: 20px;
+  }
+  .article_index {
+    gap: 3.125rem;
+  }
+  .article_index h1 {
+    width: 1000px;
+    font-size: 52px;
+  }
+  .article_index h2 {
+    font-size: 40px;
+  }
+  .article_index a {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .foto_uno_nosotros img {
+    width: 500px;
+    height: 300px;
+  }
+  .card_nosotros {
+    width: 400px;
+    height: 700px;
+  }
+  .card_nosotros h2 {
+    font-size: 32px;
+  }
+  .card_nosotros p {
+    font-size: 20px;
+  }
+  .main_contacto iframe {
+    width: 440px;
+    height: 440px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12.5rem;
+  }
+  .info_contacto {
+    width: 400px;
+  }
+  .info_contacto img {
+    width: 400px;
+  }
+  .texto_contacto {
+    left: 60px;
+    top: 100px;
+    width: 330px;
+    font-size: 20px;
+  }
+  .formulario_contacto {
+    width: 400px;
+    height: 440px;
+  }
+  .formulario_contacto label {
+    margin-left: 24px;
+    font-size: 30px;
+  }
+  #mensaje {
+    height: 210px;
+  }
+  .formulario_contacto input {
+    width: 330px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 8px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

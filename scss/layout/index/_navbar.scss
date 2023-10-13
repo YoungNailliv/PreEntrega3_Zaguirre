@@ -1,5 +1,5 @@
 header{
-    background-color: #D9534F;
+    font-family: $font_navbar;
     nav{
         background-color: #D9534F;
         height: 5rem;
@@ -45,15 +45,16 @@ header{
 }
 
 .logo_navbar {
+    transition-duration: 0.4s;
     img{    
         width: 80px;
         padding-left: .3125rem;
         padding-top: 5px;
         transition-duration: 0.4s;
     }
-        &:active{
-            transform: translateY(4px);
-        }
+    &:active{
+        transform: translateY(4px);
+    }
 }
 
 
@@ -67,6 +68,16 @@ header{
 }
 #toggle:checked ~ .menu_navbar {
     background-color: #a03d39;
+	color: white;
     display: flex;
     top: 80px;
+	li{
+		border: 1px solid white;
+		width: 75%;
+		margin: .3125rem;
+		transition-duration: 0.4s;
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
 }
