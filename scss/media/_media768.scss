@@ -11,27 +11,22 @@
                 }
             .menu_navbar{
                 width: 60%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                background-color: #D9534F;
-                box-shadow: -5px 5px 0px #a03d39;
+                @include flex(row,nowrap,center,center);
+                background-color: $rojo_principal;
+                box-shadow: -5px 5px 0px $rojo_sombra;
                 list-style: none;
-                padding-top: 10px;
-                padding-bottom: 10px;
+                @include padding(10px,0px,10px,0px);
                 border-radius: 9999px;
                 gap: .4375rem;
                 li{
                     width: 100px;
                     text-align: center;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    @include padding(10px,0px,10px,0px);
                     transition-duration: 0.2s;
                     color: white;
                     cursor: pointer;
                     &:hover{
-                        background-color: #a03d39;
+                        background-color: $rojo_sombra;
                         padding: 5px;
                         border-radius: 50px;
                         transform: scale(1.1);
@@ -49,8 +44,8 @@
                 display: flex;
                 position: absolute;
                 right: 4%;
-                background-color: #D9534F;
-                box-shadow: -5px 5px 0px #a03d39;
+                background-color: $rojo_principal;
+                box-shadow: -5px 5px 0px $rojo_sombra;
                 padding: 15px;
                 border-radius: 9999px;
                 transition-duration: 0.3s;
@@ -58,16 +53,48 @@
                     width: 35px;
                 }
                 &:active {
-                    background-color: #D9534F;
-                    box-shadow: -5px 5px #a03d39;
+                    background-color: $rojo_principal;
+                    box-shadow: -5px 5px $rojo_sombra;
                     transform: translateY(4px);
                 }
             }
         }
     }
 
-    
-.navbar_tienda {
-    background-color: #632523;
+//Nosotros
+    .nosotros{
+        background-color: rgba(255, 239, 173, 0) ;
+        gap: 3.125rem;
+        margin-bottom: 0;
+        @include flex(row,nowrap,center,center);
+        div{
+            img{
+                width: 350px;
+                height: 200px; 
+            }
+        }
+        article{
+            width: 350px;
+            height: 400px;
+            p{
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .contacto{
+        background-color: $rojo_secundario;
+    }
+    .navbar_contacto{
+        background-color: $rojo_secundario;
+    }
 }
-}
+
+
+
+
+
+
+
+

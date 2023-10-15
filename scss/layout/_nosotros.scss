@@ -1,0 +1,45 @@
+.nosotros{
+    @include flex(column,nowrap,center,center);
+    gap: 1.5625rem;
+    text-align: center;
+    background-color: $rojo_secundario; 
+    div{
+        margin-top: 10px;
+        @include flex(column,nowrap,center,center);
+        gap: .625rem;
+        img{
+            width: 300px;
+            height: 150px;
+            background-color: $rojo_principal;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: -3px 5px $rojo_sombra;
+        }
+    }
+    article{
+        @include flex(column,nowrap,center,center);
+        align-self: center;
+        width: 310px;
+        height: 600px;
+        text-align: center;
+        background-color: $rojo_principal;
+        box-shadow: -3px 5px $rojo_sombra;
+        gap: .3125rem;
+        padding-top: 10px;
+        border-radius: 50px;
+        margin-bottom: 50px;
+        h2{
+            color: white;
+            text-decoration: underline;
+            margin-bottom: 15px;
+        }
+        p{
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            align-self: center;
+            width: 250px;
+            margin-bottom: 20px;
+        }
+    }
+}

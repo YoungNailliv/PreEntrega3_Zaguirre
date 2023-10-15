@@ -1,6 +1,9 @@
 .rrss_footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex (row,nowrap,center,center);
     gap: 10px;
+    a{
+        img{
+            width: 1.25rem;
+        }
+    }
 }

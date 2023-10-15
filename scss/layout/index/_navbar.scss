@@ -1,12 +1,11 @@
 header{
     font-family: $font_navbar;
     nav{
-        background-color: #D9534F;
+
+        background-color: $rojo_principal;
         height: 5rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include flex(row,wrap,space-between,center);
+
         width: 100%;
         ul{
             width: 100%;
@@ -14,15 +13,16 @@ header{
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            display: none;
             overflow: hidden;
-            background-color: #D9534F;
+            background-color: $rojo_principal;
             position: absolute;
             list-style: none;
+            z-index: 1;
             li{
                 width: 100%;
                 text-align: center;
-                padding-top: 10px;
-                padding-bottom: 10px;
+                @include padding(10px,0px,10px,0px);
                 a{
                     text-decoration: none;
                     color: white;
@@ -33,12 +33,9 @@ header{
         label{
             cursor: pointer;
             margin-right: 25px;
-            background-color: #D9534F;
-            box-shadow: 0px 0px 10px #a03d39;
-            padding-bottom: 4px;
-            padding-top: 5px;
-            padding-left: 8px;
-            padding-right: 8px;
+            background-color: $rojo_principal;
+            box-shadow: 0px 0px 10px $rojo_sombra;
+            @include padding(5px,8px,4px,8px);
             border-radius: 10px;
         }
     }
@@ -48,8 +45,7 @@ header{
     transition-duration: 0.4s;
     img{    
         width: 80px;
-        padding-left: .3125rem;
-        padding-top: 5px;
+        @include padding(5px,0px,0px,.3125rem);
         transition-duration: 0.4s;
     }
     &:active{
@@ -67,7 +63,7 @@ header{
     display:none ;
 }
 #toggle:checked ~ .menu_navbar {
-    background-color: #a03d39;
+    background-color: $rojo_sombra;
 	color: white;
     display: flex;
     top: 80px;

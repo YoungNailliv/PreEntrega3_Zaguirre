@@ -18,8 +18,8 @@
         top: 0.5%;
     }
     .carrito_navbar:active {
-        background-color: #D9534F;
-        box-shadow: -5px 5px #a03d39;
+        background-color: $rojo_principal;
+        box-shadow: -5px 5px $rojo_sombra;
         transform: translateY(4px);
     }
 
@@ -28,8 +28,7 @@
     }
     .logo_navbar img {
         width: 100px;
-        padding-left: .3125rem;
-        padding-top: 20px;
+        @include padding (20px,0px,0px,5px);
     }
     
     .article_index{
@@ -47,9 +46,7 @@
     .article_index a {
         width: 250px;
         height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(row,nowrap,center,center);
     }
 
     .foto_uno_nosotros img{

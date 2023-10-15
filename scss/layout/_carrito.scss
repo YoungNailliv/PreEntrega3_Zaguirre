@@ -1,0 +1,138 @@
+.carrito_main{
+    @include flex(row,wrap,center,center);
+    font-family: $font_parrafo;
+    color: white;
+    gap: .9375rem;
+    background-color: $rojo_secundario;
+    
+}
+
+
+.contenedor_carrito {
+    @include flex(column,wrap,none,none);
+    width: 300px;
+    background-color: $rojo_principal;
+    padding: 10px;
+    border-radius: 10px;
+    @include margin(40px,0px,40px,0px);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    h1{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
+
+
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    ul{
+        margin-top: 5px;
+        @include flex(row,nowrap,space-between,center);
+        list-style: none;
+    }
+    .foto_carrito {
+        display: none;
+    }
+    .boton_carrito {
+        button{
+            width: 20px;
+        }
+        .boton_mas {
+            border: none;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            height: 20px;
+        }
+        .boton_menos {
+            border: none;
+            background-color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 20px;
+        }
+        input{
+            width: 20px;
+            height: 23px;
+        }
+    } 
+    
+    
+}
+
+.encabezados_carrito{
+    margin-left: 5px;
+    margin-right: 5px;
+    ul{
+        width: 100%;
+        @include flex(row,nowrap,space-between,none);
+        list-style: none;
+    }
+}
+
+.checkout {
+    margin-top: 50px;
+    background-color: #963835;
+    border-radius: 10px;
+    @include padding(20px,0px,20px,0px);
+    display: flex;
+    flex-direction: column;
+    h2{
+        text-align: center;
+    }
+    ul{
+        @include flex(row,nowrap,space-between,none);
+        list-style: none;
+        li{
+            @include margin(10px,5px,10px,5px);
+        }
+    }
+    input{
+        margin-top: 10px;
+        align-self: center;
+        height: 30px;
+        overflow: hidden;
+    }
+    button{
+        margin-top: 5px;
+        width: 180px;
+        align-self: center;
+        background-color: $verde;
+        height: 40px;
+        font-family: $font_parrafo;
+        border-radius: 10px;
+    }
+}
+
+.total_checkout {
+    margin-top: 2px;
+    background-color: $rojo_secundario;
+    border-radius: 10px;
+    height: 50px;
+    position: relative;
+    ul{
+        @include flex(row,nowrap,space-between,none);
+        list-style: none;
+        margin-top: 15px;
+        li{
+            @include margin(0px, 8px,0px,8px);
+        }
+    }
+}
+
+.boton_pagar {
+    margin-top: 3px;
+    background-color: #96CEB4;
+    height: 50px;
+    border-radius: 10px;
+    font-family: $font_parrafo;
+    width: 100%;
+}
+
+.linea{
+    margin-top: 5px;
+    width: 100%;
+    border: 1px 1px white
+}

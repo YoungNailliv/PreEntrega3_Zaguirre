@@ -2,9 +2,26 @@
     .main_tienda{
     .banner_feria {
         display: flex;
-    }
+        }
     .banner_feria_mobile {
         display: none;
+        }
     }
-}
+    .navbar_tienda{
+        background-color:$rojo_secundario;
+    }
+    .navbar_carrito{
+        background-color: $rojo_secundario;
+    }
+    
+    .contenedor_carrito{
+        width: 500px;
+    }
+    
+    .productos{
+        .foto_carrito{
+            display: block;
+        }
+    }
+    
 }

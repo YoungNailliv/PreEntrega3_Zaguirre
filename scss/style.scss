@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 //Utilities
 @import "./utilities/variables";
-
+@import "./utilities/mixing";
+@import "./utilities/maps";
 //Base
 @import "./base/reset";
 
@@ -17,12 +18,20 @@
 //MAIN TIENDA
 @import "./layout/tienda/navbar_index";
 @import "./layout/tienda/main_tienda";
+//NOSOTROS
+@import "./layout/nosotros";
+//CONTACTO
+@import "./layout/contacto";
+//CARRITO
+@import"./layout/carrito";
+
 
 
 //Componentes
+@import "./components/animations";
 
 //Media
 @import "./media/media720";
 @import "./media/media768";
-@import "./media/media1500";
+@import "./media/media1024";
 
