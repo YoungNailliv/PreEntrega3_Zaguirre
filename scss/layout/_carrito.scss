@@ -47,14 +47,14 @@
             height: 20px;
         }
         .boton_menos {
-            border: none;
-            background-color: white;
+            @extend .boton_mas;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
-            height: 20px;
         }
         input{
-            width: 20px;
+            width: 35px;
             height: 23px;
         }
     } 

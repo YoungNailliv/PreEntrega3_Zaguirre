@@ -19,7 +19,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 80px auto 50px;
+  grid-template-rows: 80px auto 40px;
   background-image: url("../assets/img/fondo2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -473,7 +473,7 @@ header nav label {
 .productos .boton_carrito button {
   width: 20px;
 }
-.productos .boton_carrito .boton_mas {
+.productos .boton_carrito .boton_mas, .productos .boton_carrito .boton_menos {
   border: none;
   background-color: white;
   border-top-left-radius: 10px;
@@ -481,14 +481,13 @@ header nav label {
   height: 20px;
 }
 .productos .boton_carrito .boton_menos {
-  border: none;
-  background-color: white;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  height: 20px;
 }
 .productos .boton_carrito input {
-  width: 20px;
+  width: 35px;
   height: 23px;
 }
 
